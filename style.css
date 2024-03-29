@@ -1,0 +1,241 @@
+.top {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+.top1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#groupA{
+    display: block;
+    width: 15vw;
+}
+
+#menubutton{
+    display: none;
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 5vw;
+    height: 5vh;
+}
+
+#closebutton{
+    margin-left: 2vw;
+    width: 5vw;
+    height: 5vh;
+    align-self: flex-start;
+}
+
+.navigationbar{
+  /* margin-top: 3px;
+  margin-left: 10vw;
+  margin-right: 10vw; */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  column-gap: 1vw;
+  align-items: center;
+}
+
+.navigationbar > div{
+  /* display: flex;
+  align-items: center; */
+  flex-shrink: 0;
+}
+
+.navigationbar a{
+  font-size: 0.875rem;
+  color: rgba(35, 35, 35, 1);
+  text-decoration: none;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 75vw;
+  background-color: rgba(0, 103, 179, 0.8);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar a{
+  width: 100%;
+  color: rgba(35, 35, 35, 1);
+  text-decoration: none;
+}
+
+.team{
+  margin-top: 2vh;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 0.52%, #5183B8 17.71%, #5183B8 55.73%);
+  padding-left: 10vw;
+  display:flex;
+  flex-direction: column;
+}
+
+.team p{
+  color : rgba(255, 255, 255, 1);
+  font-family: lato;
+}
+
+.designers{
+  display: grid;
+  /* border: solid black; */
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
+  place-items: center;
+  width: 100vw;
+
+}
+
+.mdesigners{
+  display: none;
+  /* border: solid black; */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  place-items: center;
+  width: 100vw;
+}
+
+.mdevelopers{
+  display: none;
+  /* border: solid black; */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr ;
+  place-items: center;
+  width: 100vw;
+}
+
+.developers{
+  display: grid;
+  /* border: solid black; */
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
+  place-items: center;
+  width: 100vw;
+  /* display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw; */
+}
+
+.background{
+  width: 100vw;
+  background: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 0.52%, #5183B8 17.71%, #5183B8 55.73%);
+  /* border: solid black; */
+  height: 35vh;
+  margin-bottom: 12vh;
+  z-index: -1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1/2;
+}
+
+.devbackground{
+  width: 100vw;
+  background: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 0.52%, #5183B8 17.71%, #5183B8 55.73%);
+  /* border: solid black; */
+  height: 35vh;
+  margin-bottom: 8vh;
+  z-index: -1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1/2;
+}
+
+.mbg{
+  background: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 0.52%, #5183B8 17.71%, #5183B8 55.73%);
+  height: 35vh;
+  z-index: -1;
+  width: 100%;
+  grid-column: 1/2;
+}
+
+.ppl{
+  grid-row: 1/2;
+}
+
+.mppl{
+  grid-column: 1/2;
+}
+
+.image{
+  display: inline-block;
+  width: 15.63rem; 
+  height: 21rem;
+}
+
+.image{
+  position: relative;
+  max-width: 100%;
+  
+}
+.image img.colored{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+
+}
+
+.image:hover img.colored{
+  opacity: 1;
+}
+
+.image:hover img.bnw{
+  opacity: 0;
+}
+
+.end{
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width:100vw;
+
+}
+
+
+@media(max-width: 800px){
+    .navigationbar{
+      display: none;
+    }
+    #menubutton{
+      display: block;
+    }
+    #groupA{
+      display: none;
+    }
+    #groupA div{
+        display: none;
+    }
+    .developers{
+      display: none;
+    }
+    .designers{
+      display: none;
+    }
+    .mdesigners{
+      display: grid;
+    }
+    .mdevelopers{
+      display: grid;
+    }
+}   
